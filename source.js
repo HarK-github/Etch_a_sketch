@@ -50,6 +50,12 @@ function draw(col){
                     
                     console.log(`r${i}c${j}`);
                     }
+                );box.addEventListener("ontouchstart",function darken(){
+                    let temp = document.querySelector(`.r${i}c${j}`);
+                    temp.style.backgroundColor = "black";
+                    
+                    console.log(`r${i}c${j}`);
+                    }
                 );
                 parent2.appendChild(box);
             }
@@ -75,6 +81,12 @@ function changecolor(){
                 temp.style.backgroundColor = colors[j*i%colors.length];
             
         })
+        parent2[j].addEventListener("ontouchstart",function darken(){
+            let temp = document.querySelector(`.r${i}c${j}`);
+            temp.style.backgroundColor = colors[j*i%colors.length];
+        
+    })
+
     }  
 }
 }
