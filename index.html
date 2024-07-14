@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body{
+            background-size: 100% 200%;
+        }
+        /* body,div{
+            border:1px solid black;
+        } */
+        div{
+            font-family: 'Helvetica', 'Times New Roman', Times, serif;
+            border-radius: 10px;
+        }
+        .parent,.main{
+            backdrop-filter: blur(20px);
+            -webkit--backdrop-filter: blur(20px);
+       
+        }
+        button{
+            border-radius: 10px;
+            border:0px;
+            background-color: aqua;
+            height: 20px;
+            width: 50px;
+        }
+        .parent{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .main{
+            border-radius: 10px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <script src = "./source.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a Sketch</title>
+</head>
+<body background="./bg1.jpg" >
+<div class = "parent">
+    <div style="font-size: 50px;color:aliceblue;">Etch-a-Sketch</div>
+    <div style = "margin:10px;padding:2px;justify-content: space-around;">
+    <!-- <div>Enter dimension:<input></input><button onclick = "draw(document.querySelector('input').">Enter</button></div> -->
+    <div><button onclick="reset()">Reset</button><button style = "width:200px;" onclick="changecolor()">Change color</button></div>
+    </div>
+    <div class = "main">
+    </div>
+    <div>COPYRIGHT HARSHIT KANDPAL</div>
+</div>
+</body>
+</html>
